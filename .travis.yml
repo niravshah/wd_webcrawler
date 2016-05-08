@@ -1,0 +1,8 @@
+language: java
+jdk:
+  - oraclejdk8
+deploy:
+  provider: heroku
+  api_key: "b436b13d-ffe5-42b9-87a1-4551a03d9c9f"
+  app: "nns-wd-webcrawler"
+  strategy: git
