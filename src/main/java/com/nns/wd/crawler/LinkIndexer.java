@@ -54,16 +54,16 @@ public class LinkIndexer  extends RecursiveAction {
         if (!cr.visited(url)) {
             try {
                 List<RecursiveAction> actions = new ArrayList<RecursiveAction>();
+
+                List<String> linkTags = htmlParser.getLinkTags(url);
                 cr.addVisited(url, currentDepth);
                 cr.addNewLinkToSitemap(url);
-                List<String> linkTags = htmlParser.getLinkTags(url);
-
                 for (int i = 0; i < linkTags.size(); i++) {
                     String newUrl = linkTags.get(i);
-                    cr.addToChildSitemap(url, newUrl);
                     if(!cr.visited(newUrl)) {
                         if (validator.isCurrentDepthLessThanMaxDepth(currentDepth, maxDepth)){
                             if (validator.checkNewUrl(url, newUrl)) {
+                                cr.addToChildSitemap(url, newUrl);
                                 LinkIndexer linkIndexer = (LinkIndexer) factory.getBean("linkIndexer", requestId, newUrl, cr, currentDepth + 1, maxDepth, seedUrl);
                                 actions.add(linkIndexer);
                             }
