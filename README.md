@@ -99,6 +99,10 @@ http://localhost:8080/result?id=b4dee211-c03f-48da-ad6c-f0e107e99aab
 
 ![Request](doc/request.png)
 
+**Result Resource**
+
+![Request](doc/result.png)
+
 ## Authors
 
 * **Nirav Shah**
