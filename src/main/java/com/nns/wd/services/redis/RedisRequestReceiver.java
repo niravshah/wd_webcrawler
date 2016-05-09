@@ -1,5 +1,6 @@
 package com.nns.wd.services.redis;
 
+import com.nns.wd.crawler.Crawler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.BeanFactory;
@@ -26,7 +27,8 @@ public class RedisRequestReceiver {
 
     public void receiveMessage(String message) {
         LOGGER.info("Received <" + message + ">");
-
+        Crawler crawler = (Crawler) factory.getBean("crawlerImpl", 64);
+        crawler.startCrawling(message.split("&&")[0], message.split("&&")[1], Integer.parseInt(message.split("&&")[2]));
         latch.countDown();
     }
 }

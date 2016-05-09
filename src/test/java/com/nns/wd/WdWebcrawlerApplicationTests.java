@@ -32,7 +32,7 @@ import static org.hamcrest.Matchers.not;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = WdWebcrawlerApplication.class)
+@SpringApplicationConfiguration(classes = CrawlerApplication.class)
 @WebAppConfiguration
 @IntegrationTest("server.port:0")
 @ActiveProfiles("MockService")
