@@ -91,7 +91,13 @@ http://localhost:8080/result?id=b4dee211-c03f-48da-ad6c-f0e107e99aab
 ```
 ## Usage Example
 
+**Home Resource**
+
 ![Home](doc/home.png)
+
+**New Request Resource**
+
+![Request](doc/request.png)
 
 ## Authors
 
