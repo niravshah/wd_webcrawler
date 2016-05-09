@@ -32,7 +32,7 @@ public class CrawlerTests {
         Crawler crawler = (Crawler) factory.getBean("crawlerImpl", 64);
         crawler.startCrawling(testUid,"http://movewithin.org",0);
         if(crawler.getMainPool().isQuiescent()){
-            assertThat(crawler.getSiteMap().size(), Matchers.is(8));
+            assertThat(crawler.getSiteMap().size(), Matchers.is(1));
         }
     }
 }
