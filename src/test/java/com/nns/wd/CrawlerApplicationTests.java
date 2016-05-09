@@ -36,7 +36,7 @@ import static org.hamcrest.core.IsEqual.equalTo;
 @WebAppConfiguration
 @IntegrationTest("server.port:0")
 @ActiveProfiles("MockService")
-public class WdWebcrawlerApplicationTests {
+public class CrawlerApplicationTests {
 
 	@Value("${local.server.port}")
 	int port;

@@ -25,8 +25,8 @@ public class RequestResource extends BaseResource{
     RequestService service;
 
     @RequestMapping(method = RequestMethod.GET)
-    HttpEntity<ApiResponse> createNewRequest(@RequestParam(name = "url") String url, @RequestParam(name = "md") int maxD) {
-        String s = service.startNewRequest(url, maxD);
+    HttpEntity<ApiResponse> createNewRequest(@RequestParam(name = "url") String url, @RequestParam(name = "md") int md) {
+        String s = service.startNewRequest(url, md);
         ApiResponse rep =  getHateoasRepresentation(MESSAGE, String.format(DETAIL_MESSAGE,s));
         addResultLink(rep,s);
         return new ResponseEntity<>(rep, HttpStatus.OK);

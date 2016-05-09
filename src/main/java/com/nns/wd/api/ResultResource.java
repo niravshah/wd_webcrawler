@@ -38,6 +38,7 @@ public class ResultResource extends BaseResource{
         ApiResponse rep = getHateoasRepresentation(
                 requestStatus, (result != null) ? SITEMAP_MESSAGE : WAIT_MESSAGE);
 
+        addResultLink(rep,id);
         Type type = new TypeToken<Map<String, Collection<String>>>() {
         }.getType();
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
