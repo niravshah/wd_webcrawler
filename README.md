@@ -89,6 +89,9 @@ This resource accepts one parameter.
 https://nns-wd-webcrawler.herokuapp.com/result?id=b4dee211-c03f-48da-ad6c-f0e107e99aab
 http://localhost:8080/result?id=b4dee211-c03f-48da-ad6c-f0e107e99aab
 ```
+## Usage Example
+
+![Home](doc/home.png)
 
 ## Authors
 
